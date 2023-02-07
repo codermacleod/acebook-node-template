@@ -5,9 +5,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <form action='/sessions?_method=DELETE' method='POST'>
+<nav>
+    <form action="/" method="GET">
+      <input type="submit" value="Home">
+    </form>
+    <form action="/myposts" method="GET">
+      <input type="submit" value="My Posts">
+    </form>
+    <form action="/messages" method="GET">
+      <input type="submit" value="Messages">
+    </form>
+    <form action="/friends" method="GET">
+      <input type="submit" value="Friends">
+    </form>
+    <form action="/notifications" method="GET">
+      <input type="submit" value="Notifications">
+    </form>
+    <form action="/userprofile" method="GET">
+      <input type="submit" value="Profile">
+    </form>
+    <form action="/sessions?_method=DELETE" method="POST">
       <input type="submit" value="Log Out">
     </form>
+    </nav>
     {{{body}}}
   </body>
 </html>
