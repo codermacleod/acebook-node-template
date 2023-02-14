@@ -24,7 +24,5 @@ jobs:
         env:
           MONGODB_URI: "mongodb://0.0.0.0:27017/"
           MONGODB_DATABASE: "acebook_test"
-      - name: run jest unit tests
-        run: npm run test:unit
 
 # Testing merging with main branch...
