@@ -28,15 +28,19 @@ const UsersController = {
     }
   },
 
-  Sendmessage: async (req, res) => {
-     const Mymessages = await Message.find({receiver:req.session.user._id})
-     res.render("users/messages", {Mymessages: Mymessages})
-   },
+  Messages: (req, res) => {
+    res.render("users/messages")
+  },
 
-   Mymessages: async (req, res) => {
-     const Mymessages = await Message.find({receiver:req.session.user._id})
-     res.render("users/messages", {Mymessages: Mymessages})
-   },
+  // Sendmessage: async (req, res) => {
+  //    const Mymessages = await Message.find({receiver:req.session.user._id})
+  //    res.render("users/messages", {Mymessages: Mymessages})
+  //  },
+
+  //  Mymessages: async (req, res) => {
+  //    const Mymessages = await Message.find({receiver:req.session.user._id})
+  //    res.render("users/messages", {Mymessages: Mymessages})
+  //  },
 
   Friends: (req, res) => {
     res.render("users/friends")
