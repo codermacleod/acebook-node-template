@@ -15,9 +15,15 @@ const UsersController = {
     });
   },
 
-  Messages: (req, res) => {
-    res.render("users/messages")
-  },
+  Sendmessage: async (req, res) => {
+     const Mymessages = await Message.find({receiver:req.session.user._id})
+     res.render("users/messages", {Mymessages: Mymessages})
+   },
+
+   Mymessages: async (req, res) => {
+     const Mymessages = await Message.find({receiver:req.session.user._id})
+     res.render("users/messages", {Mymessages: Mymessages})
+   },
 
   Friends: (req, res) => {
     res.render("users/friends")
