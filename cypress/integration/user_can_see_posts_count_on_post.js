@@ -27,3 +27,5 @@ describe("Timeline", () => {
     cy.get(".posts").should("contain", "0 likes");
   });
 });
+
+

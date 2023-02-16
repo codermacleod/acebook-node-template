@@ -10,4 +10,6 @@ describe("Registration", () => {
 
     cy.url().should("include", "/posts");
   });
+
 });
+
